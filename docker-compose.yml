@@ -1,0 +1,12 @@
+services:
+    web_assignment2:
+      build: ./CT519_Assignment2
+      ports:
+        - 8000:80
+    web2:
+      image: nginx:alpine
+        # working_dir: /usr/src/app
+      volumes:
+      - ./web2/html:/usr/share/nginx/html
+      ports:
+      - 80:80
